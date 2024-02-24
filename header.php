@@ -13,8 +13,7 @@
     <a href="index.php?view=allGames"><img src="svg/list.svg"></a>
     <div class="header-right">
         <?php
-        echo "<p class='header-text'>Adresse IP : " . $_SERVER["REMOTE_ADDR"] . "</p>";
-        echo "<a href='index.php?view=createGame'><img src='svg/new.svg'></a>";
+        echo "<p class='header-text'>Adresse IP : <span class='ip'>" . $_SERVER["REMOTE_ADDR"] . "</span></p>";
         ?>
     </div>
 </div>
