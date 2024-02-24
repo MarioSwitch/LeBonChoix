@@ -12,6 +12,8 @@ for($i = 0; $i < $open_games_count; $i++){
     $id = $open_games[$i]["id"];
     $players = $open_games[$i]["players"];
     $choices = $open_games[$i]["choices"];
-    echo "<a href='?view=game&id=" . $id . "'>Partie №" . $id . " <small>(" . $players . " joueurs, " . $choices . " choix)</small></a>";
+    $players_count = intSQL("SELECT COUNT(*) FROM `choices` WHERE `game` = ?;", [$id]);
+    $players_remaining = $players - $players_count;
+    echo "<a href='?view=game&id=" . $id . "'>Partie №" . $id . " <small>(encore " . $players_remaining . " joueurs (" . $players_count . " / " . $players . "), " . $choices . " choix)</small></a>";
 }
 ?>

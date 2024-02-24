@@ -5,6 +5,11 @@
     src: url("roobert.woff2") format("opentype");
 }
 
+@font-face {
+    font-family: CascadiaCode;
+    src: url("CascadiaCode.woff2") format("opentype");
+}
+
 body {
     overflow-x: hidden;
     background: #303;
@@ -117,6 +122,18 @@ th {
     position: sticky;
     top: 55px;
     background-color: #606;
+}
+
+span.ip{
+    font: 25px CascadiaCode;
+}
+
+td.win {
+    background-color: #090;
+}
+
+td.lose {
+    background-color: #900;
 }
 
 /* ---------- Header / Navbar ---------- */
