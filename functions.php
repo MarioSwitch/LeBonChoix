@@ -143,11 +143,12 @@ function createGame(int $players, int $choices){
  * @param string $ip the IP address of the player
  * @param int $game the game's ID
  * @param int $choice the choice
+ * @param string $nickname the player's nickname
  * @return void
  */
-function selectChoice(string $ip, int $game, int $choice){
+function selectChoice(string $ip, int $game, int $choice, string $nickname){
     global $now;
-    rawSQL("INSERT INTO choices (`ip`, `game`, `choice`) VALUES (?, ?, ?);", [$ip, $game, $choice]);
+    rawSQL("INSERT INTO choices (`ip`, `game`, `choice`, `nickname`) VALUES (?, ?, ?, ?);", [$ip, $game, $choice, $nickname]);
     $player_count = intSQL("SELECT COUNT(*) FROM `choices` WHERE `game` = ?;", [$game]);
     $players_max = intSQL("SELECT `players` FROM `games` WHERE `id` = ?;", [$game]);
     if($player_count >= $players_max){

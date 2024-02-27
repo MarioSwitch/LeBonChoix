@@ -16,6 +16,7 @@ Si vous avez des questions ou des bugs à signaler, vous pouvez nous contacter p
 Les icônes proviennent de <a href="https://www.streamlinehq.com/icons/streamline-mini-line">Stream Line HQ</a>.<br><br>
 Le code source est disponible sur <a href="https://github.com/MarioSwitch/LeBonChoix">GitHub</a>.<br>
 Le code source est réadapté de <a href="https://github.com/MarioSwitch/BetterTwitchPredictions">Better Twitch Predictions</a>.<br><br>
+v0.1 (février 2024) par <a href="https://www.marioswitch.fr/">MarioSwitch</a><br>
 v0.0 (février 2024) par <a href="https://www.marioswitch.fr/">MarioSwitch</a><br>
-<i>Version 0.0.3 du 24 février 2024</i>
+<i>Version 0.1.0 du 27 février 2024</i>
 </p>

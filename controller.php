@@ -13,7 +13,7 @@ switch($_REQUEST["action"]){
     break;
 
     case 'selectChoice' :
-        if(!($_REQUEST["game"] && $_REQUEST["choice"])){
+        if(!($_REQUEST["game"] && $_REQUEST["choice"] && $_REQUEST["nickname"])){
             header("Location:index.php?view=error");
             die("");
         }
@@ -22,7 +22,11 @@ switch($_REQUEST["action"]){
             header("Location:index.php?view=error");
             die("");
         }
-        selectChoice($_SERVER["REMOTE_ADDR"],$_REQUEST["game"],$_REQUEST["choice"]);
+        if(!(preg_match("/^[a-zA-Z0-9]{1,20}$/", $_REQUEST["nickname"]))){
+            header("Location:index.php?view=error");
+            die("");
+        }
+        selectChoice($_SERVER["REMOTE_ADDR"],$_REQUEST["game"],$_REQUEST["choice"],$_REQUEST["nickname"]);
         $query = "view=game&id=" . $_REQUEST["game"];
     break;
 }

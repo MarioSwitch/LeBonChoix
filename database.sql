@@ -11,6 +11,7 @@ CREATE TABLE `choices` (
     `ip` varchar(15) NOT NULL,
     `game` int NOT NULL,
     `choice` int NOT NULL,
+    `nickname` varchar(20) NOT NULL,
     PRIMARY KEY (`ip`, `game`),
     CONSTRAINT `game_id` FOREIGN KEY (`game`) REFERENCES `games` (`id`)
 );
